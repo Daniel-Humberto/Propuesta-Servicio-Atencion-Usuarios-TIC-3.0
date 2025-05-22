@@ -1,9 +1,9 @@
 {
-  "name": "my-v0-project",
+  "name": "Servicio-Atencion-Usuarios-TIC-3.0'V1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "Humbert",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
