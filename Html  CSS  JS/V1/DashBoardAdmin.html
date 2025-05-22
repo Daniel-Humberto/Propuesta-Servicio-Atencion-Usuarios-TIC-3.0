@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+    <html lang="es">
+
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Admin</title>
+        <link rel="stylesheet" href="DashBoardAdmin.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+
+
+
+    <body>
+        <div class="container">
+
+
+            <!-- Header -->
+            <header>
+                <div class="header-container">
+                    <div class="logo-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg  " alt="Logo UASLP" class="logo">
+                        <h1>UASLP > Servicio de atención a usuarios de TIC 3.0</h1>
+                    </div>
+                    <div class="nav-links">
+                        <a href="DashBoardAdmin.html">DashBoard</a>
+                        <a href="TicketsAdmin.html">Tickets</a>
+                        <a href="OperadoresAdmin.html">Operadores</a>
+                        <a href="InventarioAdmin.html">Inventario</a>
+                        <a href="CalendarioAdmin.html">Calendario</a>
+                        <a href="Login.html">Salir</a>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Nav Bar -->
+            <div class="nav-bar">
+                <span>Servicio de Atención a Usuarios > DashBoard </span>
+            </div>
+
+
+            <!-- Main Content -->
+            <main class="main">
+
+
+                <!-- Sub Header  -->
+                <div class="page-header">
+                    <h1>Dashboard Admin</h1>
+                </div>
+
+
+                <!-- Cards -->
+                <div class="stats-grid">
+
+                    <div class="card stat-card">
+                        <div class="card-header">
+                            <h3>Total Tickets</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-value">1,500</div>
+                            <p class="stat-description">↑ 12% desde el mes pasado</p>
+                        </div>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="card-header">
+                            <h3>Tickets Resueltos</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-value">1,250</div>
+                            <p class="stat-description">↑ 16% desde el mes pasado</p>
+                        </div>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="card-header">
+                            <h3>Tickets Pendientes</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-value">200</div>
+                            <p class="stat-description">↓ 8% desde el mes pasado</p>
+                        </div>
+                    </div>
+
+                    <div class="card stat-card">
+                        <div class="card-header">
+                            <h3>Tickets Cancelados</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="8" y1="8" x2="16" y2="16"></line>
+                                <line x1="16" y1="8" x2="8" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-value">50</div>
+                            <p class="stat-description">↓ 4% desde el mes pasado</p>
+                        </div>
+                    </div>                    
+
+                    <div class="card stat-card">
+                        <div class="card-header">
+                            <h3>Tiempo Promedio</h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <div class="card-content">
+                            <div class="stat-value">1.2 días</div>
+                            <p class="stat-description">↓ 0.2 días desde el mes pasado</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Tabs -->
+                <div class="tabs">
+
+
+                    <!-- Tabs List -->
+                    <div class="tab-list">
+                        <button class="tab-button active" data-tab="overview">Resumen</button>
+                        <button class="tab-button" data-tab="tickets">Tickets Recientes</button>
+                        <button class="tab-button" data-tab="analytics">Rendimiento por Operador</button>
+                    </div>
+
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+                        <!-- Overview Tab -->
+                        <div class="tab-pane active" id="overview">
+
+                            <div class="charts-grid">
+                                <div class="card chart-card">
+                                    <div class="card-header">
+                                        <h3>Estado de Tickets</h3>
+                                        <p>Distribución de tickets por estado en el último mes</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <canvas id="ticketStatusChart" height="300"></canvas>
+                                    </div>
+                                </div>
+
+                                <div class="card chart-card">
+                                    <div class="card-header">
+                                        <h3>Tiempo de Respuesta</h3>
+                                        <p>Promedio de tiempo de respuesta por día</p>
+                                    </div>
+                                    <div class="card-content">
+                                        <canvas id="responseTimeChart" height="300"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- Tickets Tab -->
+                        <div class="tab-pane" id="tickets">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Tickets Recientes</h3>
+                                    <p>Lista de los últimos tickets registrados en el sistema</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="table-container">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Asunto</th>
+                                                    <th>Solicitante</th>
+                                                    <th>Proceso</th>
+                                                    <th>Fecha Abierto</th>
+                                                    <th>Fecha Cerrado</th>
+                                                    <th>Estado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-medium">#12345</td>
+                                                    <td>Modificación etiqueta extensión y adecuación en desvio de Llamadas</td>
+                                                    <td>MARIANA ELIZABETH</td>
+                                                    <td>INF</td>
+                                                    <td>29/01/2025</td>
+                                                    <td>30/01/2025</td>
+                                                    <td><span class="badge badge-error">Cancelado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12344</td>
+                                                    <td>Solicitud de nuevo equipo telefónico</td>
+                                                    <td>CARLOS MARTINEZ</td>
+                                                    <td>INF</td>
+                                                    <td>28/01/2025</td>
+                                                    <td>29/01/2025</td>
+                                                    <td><span class="badge badge-success">Cerrado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12343</td>
+                                                    <td>Problema con línea telefónica</td>
+                                                    <td>LAURA HERNANDEZ</td>
+                                                    <td>INF</td>
+                                                    <td>27/01/2025</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">Pendiente</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12342</td>
+                                                    <td>Configuración de buzón de voz</td>
+                                                    <td>ROBERTO SANCHEZ</td>
+                                                    <td>INF</td>
+                                                    <td>26/01/2025</td>
+                                                    <td>28/01/2025</td>
+                                                    <td><span class="badge badge-success">Cerrado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12341</td>
+                                                    <td>Instalación de nueva extensión</td>
+                                                    <td>PATRICIA LOPEZ</td>
+                                                    <td>INF</td>
+                                                    <td>25/01/2025</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-info">En Proceso</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline btn-full" onclick="window.location.href='TicketsAdmin.html'">Ver todos los tickets</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Rendimiento Tab -->
+                        <div class="tab-pane" id="analytics">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Rendimiento por Operador</h3>
+                                    <p>Tickets resueltos y tiempo promedio de resolución</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="operator-stats">
+                                        <div class="operator">
+                                            <div class="operator-header">
+                                                <div class="operator-name">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg>
+                                                    <span>BAUTISTA ITALO CARLOS DELFINO</span>
+                                                </div>
+                                                <span class="ticket-count">245 tickets</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 85%"></div>
+                                            </div>
+                                            <div class="operator-details">
+                                                <span>Tiempo promedio: 0.8 días</span>
+                                                <span>Satisfacción: 98%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="operator">
+                                            <div class="operator-header">
+                                                <div class="operator-name">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg>
+                                                    <span>RODRIGUEZ MARIA EUGENIA</span>
+                                                </div>
+                                                <span class="ticket-count">198 tickets</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 72%"></div>
+                                            </div>
+                                            <div class="operator-details">
+                                                <span>Tiempo promedio: 1.2 días</span>
+                                                <span>Satisfacción: 95%</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="operator">
+                                            <div class="operator-header">
+                                                <div class="operator-name">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                                        <circle cx="9" cy="7" r="4"></circle>
+                                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                                    </svg>
+                                                    <span>HERNANDEZ LAURA DANIELA</span>
+                                                </div>
+                                                <span class="ticket-count">176 tickets</span>
+                                            </div>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 65%"></div>
+                                            </div>
+                                            <div class="operator-details">
+                                                <span>Tiempo promedio: 1.5 días</span>
+                                                <span>Satisfacción: 92%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline btn-full" onclick="window.location.href='OperadoresAdmin.html'">Ver todos los operadores</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+
+
+        </div>
+    </body>
+
+
+
+
+    <script src="DashBoardAdmin.js"></script>
+</html>

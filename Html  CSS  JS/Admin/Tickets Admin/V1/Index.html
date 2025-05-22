@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Tickets</title>
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --background: #ffffff;
+            --foreground: #0f172a;
+            --primary: #3b82f6;
+            --border: #e2e8f0;
+            --muted-foreground: #64748b;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.5;
+            font-size: 14px;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .table th {
+            background-color: var(--border);
+            font-weight: 500;
+            color: var(--muted-foreground);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .table td {
+            font-size: 14px;
+        }
+
+        .table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tr:hover {
+            background-color: rgba(59, 130, 246, 0.05);
+            cursor: pointer;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .badge-success {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+
+        /* Page Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 640px) {
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>Registro de Tickets</h1>
+    </div>
+    <div class="table-container">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Ticket</th>
+                <th>Abierto</th>
+                <th>Asunto</th>
+                <th>Servicio</th>
+                <th>Estado</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="font-medium">34154</td>
+                <td>04/07/2024</td>
+                <td>Modificación</td>
+                <td>Modificaciones, adecuaciones y cambios de Telefonia</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34333</td>
+                <td>12/08/2024</td>
+                <td>Cuenta de correo temporal</td>
+                <td>Creación cuenta de correo temporal/departamental</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34370</td>
+                <td>14/08/2024</td>
+                <td>Hospedaje web</td>
+                <td>Hospedaje de Sitios Web</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34371</td>
+                <td>14/08/2024</td>
+                <td>Hospedaje web</td>
+                <td>Hospedaje de Sitios Web</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34391</td>
+                <td>15/08/2024</td>
+                <td>Alta DNS</td>
+                <td>Servicios DNS</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34540</td>
+                <td>29/08/2024</td>
+                <td>Reestructuración red</td>
+                <td>Modificaciones, adecuaciones y cambios a Redes</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34678</td>
+                <td>11/09/2024</td>
+                <td>Elaboración constancias</td>
+                <td>Acreditación digital</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34781</td>
+                <td>25/09/2024</td>
+                <td>Modificación etiqueta extensión</td>
+                <td>Modificaciones, adecuaciones y cambios de Telefonia</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34818</td>
+                <td>02/10/2024</td>
+                <td>Reestructuración red</td>
+                <td>Modificaciones, adecuaciones y cambios a Redes</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">34928</td>
+                <td>17/10/2024</td>
+                <td>Reestructuración red</td>
+                <td>Modificaciones, adecuaciones y cambios a Redes</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">35319</td>
+                <td>10/12/2024</td>
+                <td>Modificación DNS</td>
+                <td>Servicios DNS</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">35332</td>
+                <td>13/12/2024</td>
+                <td>Cambio de contraseña</td>
+                <td>Cambio de Contraseña temporal/departamental</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">35333</td>
+                <td>13/12/2024</td>
+                <td>Modificación red inalámbrica</td>
+                <td>Modificaciones, adecuaciones y cambios a Redes</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">35582</td>
+                <td>28/01/2025</td>
+                <td>Cuenta de correo personal</td>
+                <td>Creación de cuentas de correo personal</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            <tr>
+                <td class="font-medium">35593</td>
+                <td>29/01/2025</td>
+                <td>Modificación etiqueta extensión y adecuación en desvio de Ilamadas</td>
+                <td>Modificaciones, adecuaciones y cambios de Telefonia</td>
+                <td><span class="badge badge-success">Cerrado</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Optional: Add interactivity to table rows
+    document.querySelectorAll('.table tbody tr').forEach(row => {
+        row.addEventListener('click', () => {
+            // You can add navigation or details view logic here
+            alert(`Detalles del ticket ${row.querySelector('td').textContent}`);
+        });
+    });
+</script>
+</body>
+</html>

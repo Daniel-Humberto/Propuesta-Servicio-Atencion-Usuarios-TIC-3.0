@@ -1,0 +1,260 @@
+    <!DOCTYPE html>
+    <html lang="es">
+
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard User</title>
+        <link rel="stylesheet" href="DashBoardUser.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+
+
+
+    <body>
+        <div class="container">
+
+
+            <!-- Header -->
+            <header>
+                <div class="header-container">
+                    <div class="logo-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg  " alt="Logo UASLP" class="logo">
+                        <h1>UASLP > Servicio de atención a usuarios de TIC 3.0</h1>
+                    </div>
+                    <div class="nav-links">
+                        <a href="DashBoardUser.html">DashBoard</a>
+                        <a href="FormularioUser.html">Formulario</a>
+                        <a href="FormularioUserInstalaciones.html">Solicitud de Instalaciones</a>
+                        <a href="TicketsUserUser.html">Tickets</a>
+                        <a href="EncuestaUser.html">Encuesta</a>
+                        <a href="Login.html">Salir</a>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Nav Bar -->
+            <div class="nav-bar">
+                <span>Servicio de Atención a Usuarios > DashBoard </span>
+            </div>
+
+
+            <!-- Main Content -->
+            <main class="main">
+
+
+                <!-- Sub Header  -->
+                <div class="page-header">
+                    <h1>Dashboard User</h1>
+                </div>
+
+
+                <!-- Tabs -->
+                <div class="tabs">
+
+
+                    <!-- Tabs List -->
+                    <div class="tab-list">
+                        <button class="tab-button active" data-tab="tickets">Tickets Recientes</button>
+<!--                    <button class="tab-button" data-tab="form">Formulario</button>                  -->
+<!--                    <button class="tab-button" data-tab="overview">Resumen</button>                 -->
+                    </div>
+
+
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+
+
+                        <!-- Tickets Tab -->
+                        <div class="tab-pane active" id="tickets">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3>Tickets Recientes</h3>
+                                    <p>Lista de los últimos tickets registrados en el sistema</p>
+                                </div>
+                                <div class="card-content">
+                                    <div class="table-container">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Asunto</th>
+                                                    <th>Solicitante</th>
+                                                    <th>Proceso</th>
+                                                    <th>Fecha Abierto</th>
+                                                    <th>Fecha Cerrado</th>
+                                                    <th>Estado</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="font-medium">#12345</td>
+                                                    <td>Modificación etiqueta extensión y adecuación en desvio de Llamadas</td>
+                                                    <td>MARIANA ELIZABETH</td>
+                                                    <td>INF</td>
+                                                    <td>29/01/2025</td>
+                                                    <td>30/01/2025</td>
+                                                    <td><span class="badge badge-error">Cancelado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12344</td>
+                                                    <td>Solicitud de nuevo equipo telefónico</td>
+                                                    <td>CARLOS MARTINEZ</td>
+                                                    <td>INF</td>
+                                                    <td>28/01/2025</td>
+                                                    <td>29/01/2025</td>
+                                                    <td><span class="badge badge-success">Cerrado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12343</td>
+                                                    <td>Problema con línea telefónica</td>
+                                                    <td>LAURA HERNANDEZ</td>
+                                                    <td>INF</td>
+                                                    <td>27/01/2025</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-warning">Pendiente</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12342</td>
+                                                    <td>Configuración de buzón de voz</td>
+                                                    <td>ROBERTO SANCHEZ</td>
+                                                    <td>INF</td>
+                                                    <td>26/01/2025</td>
+                                                    <td>28/01/2025</td>
+                                                    <td><span class="badge badge-success">Cerrado</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="font-medium">#12341</td>
+                                                    <td>Instalación de nueva extensión</td>
+                                                    <td>PATRICIA LOPEZ</td>
+                                                    <td>INF</td>
+                                                    <td>25/01/2025</td>
+                                                    <td>-</td>
+                                                    <td><span class="badge badge-info">En Proceso</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline btn-full" onclick="window.location.href='TicketsUserUser.html'">Ver todos los tickets</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Rendimiento Tab -->
+                        <div class="tab-pane" id="form">
+
+
+
+
+                            <div class="form-card">
+                                <form id="ticket-form" action="process.php" method="POST">
+                                    <div class="card-header">
+                                        <h3>Información del Contacto</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label for="rpe">RPE</label>
+                                                <input type="text" id="rpe" name="rpe" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nombre">Nombre</label>
+                                                <input type="text" id="nombre" name="nombre" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="correo">Correo electrónico</label>
+                                                <input type="email" id="correo" name="correo" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="telefono">Teléfono</label>
+                                                <input type="tel" id="telefono" name="telefono" class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="unidad">Unidad</label>
+                                                <select id="unidad" name="unidad" class="form-control">
+                                                    <option value="1" selected>COORDINACION DE AGENDA AMBIENTAL DE LA UASLP</option>
+                                                    <option value="2">FACULTAD DE INGENIERÍA</option>
+                                                    <option value="3">FACULTAD DE MEDICINA</option>
+                                                    <option value="4">FACULTAD DE DERECHO</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="subunidad">SubUnidad</label>
+                                                <select id="subunidad" name="subunidad" class="form-control">
+                                                    <option value="1" selected>AGENDA AMBIENTAL DE LA UASLP</option>
+                                                    <option value="2">OTRA SUBUNIDAD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card-header">
+                                        <h3>Detalle del Servicio Requerido</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label for="proceso">Proceso</label>
+                                                <select id="proceso" name="proceso" class="form-control">
+                                                    <option value="1" selected>Atención y Soporte a Usuarios de Tecnologías</option>
+                                                    <option value="2">Otro proceso</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="servicio">Servicio</label>
+                                                <select id="servicio" name="servicio" class="form-control" required>
+                                                    <option value="" selected>Seleccione una opción</option>
+                                                    <option value="1">Soporte técnico</option>
+                                                    <option value="2">Instalación de software</option>
+                                                    <option value="3">Problemas de red</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group full-width">
+                                                <label for="asunto">Asunto</label>
+                                                <input type="text" id="asunto" name="asunto" class="form-control" required>
+                                            </div>
+                                            <div class="form-group full-width">
+                                                <label for="detalle">Detalle solicitud</label>
+                                                <textarea id="detalle" name="detalle" rows="5" class="form-control" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Enviar Ticket</button>
+                                    </div>
+
+
+                                </form>
+                            </div>
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+        </div>
+    </body>
+
+
+    <script src="DashBoardUser.js"></script>
+</html>

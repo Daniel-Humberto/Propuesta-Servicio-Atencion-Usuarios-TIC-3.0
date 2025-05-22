@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventarios Admin</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg" alt="Logo UASLP" class="logo">
+                <h1>UASLP > Servicio de atención a usuarios de TIC 3.0
+                </h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Nuevo bien</a>
+                <a href="#">Reportes</a>
+                <a href="#">Salir</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+        <span>Inventarios > SIIA > Control Interno</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="dashboard-container">
+            <h2 class="section-title">Panel de Control de Inventarios</h2>
+
+            <div class="card-container">
+                <div class="card" onclick="mostrarModulo('bienes')">
+                    <h3>Control de Bienes</h3>
+                    <p>Gestión de asignación y actualización de bienes</p>
+                </div>
+                <div class="card" onclick="mostrarModulo('traspasos')">
+                    <h3>Traspasos</h3>
+                    <p>Traspasos internos y externos</p>
+                </div>
+                <div class="card" onclick="mostrarModulo('bajas')">
+                    <h3>Bajas</h3>
+                    <p>Gestión y historial de bajas</p>
+                </div>
+                <div class="card" onclick="mostrarModulo('consumibles')">
+                    <h3>Consumibles</h3>
+                    <p>Control de materiales consumibles</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Inventarios -->
+        <div class="table-container">
+            <div class="table-header">
+                <h3>Inventario Actual</h3>
+                <div class="actions">
+                    <button class="btn btn-primary" id="btnNuevoBien">Nuevo Bien</button>
+                    <select id="filtroTipo" class="select-filter">
+                        <option value="todos">Todos los tipos</option>
+                        <option value="mobiliario">Mobiliario</option>
+                        <option value="equipo">Equipo</option>
+                        <option value="computo">Cómputo</option>
+                        <option value="consumible">Consumible</option>
+                    </select>
+                </div>
+            </div>
+
+            <table class="table" id="tablaInventario">
+                <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th>Tipo</th>
+                    <th>Ubicación</th>
+                    <th>Asignado a</th>
+                    <th>Fecha Adq.</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="font-medium">INV-2024-001</td>
+                    <td>Escritorio ejecutivo</td>
+                    <td>Mobiliario</td>
+                    <td>Oficina 201</td>
+                    <td>Departamento de Ecología</td>
+                    <td>15/01/2024</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-002</td>
+                    <td>Computadora Dell Latitude</td>
+                    <td>Equipo de cómputo</td>
+                    <td>Oficina 105</td>
+                    <td>Luis Martínez</td>
+                    <td>22/01/2024</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-003</td>
+                    <td>Impresora HP LaserJet</td>
+                    <td>Equipo</td>
+                    <td>Sala de juntas</td>
+                    <td>Uso compartido</td>
+                    <td>03/02/2024</td>
+                    <td><span class="badge badge-warning">Mantenimiento</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-004</td>
+                    <td>Silla ergonómica</td>
+                    <td>Mobiliario</td>
+                    <td>Oficina 305</td>
+                    <td>María González</td>
+                    <td>15/02/2024</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-005</td>
+                    <td>Proyector Epson</td>
+                    <td>Equipo</td>
+                    <td>Auditorio</td>
+                    <td>Eventos</td>
+                    <td>28/02/2024</td>
+                    <td><span class="badge badge-info">Préstamo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-006</td>
+                    <td>Material de oficina</td>
+                    <td>Consumible</td>
+                    <td>Almacén</td>
+                    <td>Stock general</td>
+                    <td>05/03/2024</td>
+                    <td><span class="badge badge-warning">Mínimo stock</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Reponer"><span class="icon">➕</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-007</td>
+                    <td>Laptop HP Probook</td>
+                    <td>Equipo de cómputo</td>
+                    <td>-</td>
+                    <td>Alejandro Sánchez</td>
+                    <td>12/03/2024</td>
+                    <td><span class="badge badge-error">Baja</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Ver historial"><span class="icon">📋</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-008</td>
+                    <td>Archivero metálico</td>
+                    <td>Mobiliario</td>
+                    <td>Oficina 112</td>
+                    <td>Departamento Administrativo</td>
+                    <td>20/03/2024</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-009</td>
+                    <td>Cámara fotográfica</td>
+                    <td>Equipo</td>
+                    <td>Oficina 201</td>
+                    <td>Departamento de Comunicación</td>
+                    <td>05/04/2024</td>
+                    <td><span class="badge badge-success">Activo</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Traspaso"><span class="icon">🔄</span></button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-medium">INV-2024-010</td>
+                    <td>Papel reciclado carta</td>
+                    <td>Consumible</td>
+                    <td>Almacén</td>
+                    <td>Stock general</td>
+                    <td>12/04/2024</td>
+                    <td><span class="badge badge-success">Disponible</span></td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn-icon" title="Editar"><span class="icon">✏️</span></button>
+                            <button class="btn-icon" title="Solicitar"><span class="icon">📝</span></button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="pagination">
+                <button class="btn-pagination">Anterior</button>
+                <span class="pagination-info">Página 1 de 5</span>
+                <button class="btn-pagination">Siguiente</button>
+            </div>
+        </div>
+
+        <!-- Sección de Estadísticas -->
+        <div class="stats-container">
+            <h3 class="section-title">Resumen de Inventario</h3>
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h4>Total de Bienes</h4>
+                    <p class="stat-number">523</p>
+                    <p class="stat-description">Activos: 498 | Bajas: 25</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Valor del Inventario</h4>
+                    <p class="stat-number">$1,245,320</p>
+                    <p class="stat-description">Actualizado: 07/03/2025</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Movimientos Recientes</h4>
+                    <p class="stat-number">37</p>
+                    <p class="stat-description">Últimos 30 días</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Alertas</h4>
+                    <p class="stat-number">5</p>
+                    <p class="stat-description">Requieren atención</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modal para nuevo bien -->
+    <div class="modal" id="modalNuevoBien">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Registro de Nuevo Bien</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="formNuevoBien">
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <input type="text" id="descripcion" name="descripcion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Seleccione...</option>
+                            <option value="mobiliario">Mobiliario</option>
+                            <option value="equipo">Equipo</option>
+                            <option value="computo">Equipo de cómputo</option>
+                            <option value="consumible">Consumible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ubicacion">Ubicación:</label>
+                        <input type="text" id="ubicacion" name="ubicacion">
+                    </div>
+                    <div class="form-group">
+                        <label for="asignado">Asignado a:</label>
+                        <input type="text" id="asignado" name="asignado">
+                    </div>
+                    <div class="form-group">
+                        <label for="fechaAdq">Fecha de Adquisición:</label>
+                        <input type="date" id="fechaAdq" name="fechaAdq" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="costo">Costo:</label>
+                        <input type="number" id="costo" name="costo" min="0" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+                <button class="btn btn-primary" id="btnGuardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<script src="Script.js"></script>
+</html>

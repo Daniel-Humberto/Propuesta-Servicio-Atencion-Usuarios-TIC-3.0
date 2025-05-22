@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Admin</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg" alt="Logo UASLP" class="logo">
+                <h1>UASLP > Servicio de atención a usuarios de TIC 3.0</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Reservar</a>
+                <a href="#">Inventarios</a>
+                <a href="#">Reportes</a>
+                <a href="#">Salir</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+        <span>Agenda Ambiental > Calendario</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Controls and filters -->
+        <div class="controls">
+            <div class="month-selector">
+                <button id="prev-month" class="nav-button">&#10094;</button>
+                <h2 id="current-month">Marzo 2025</h2>
+                <button id="next-month" class="nav-button">&#10095;</button>
+            </div>
+            <div class="filter-options">
+                <select id="resource-type">
+                    <option value="all">Todos los recursos</option>
+                    <option value="room">Salones</option>
+                    <option value="equipment">Equipos</option>
+                    <option value="training">Capacitaciones</option>
+                </select>
+                <button class="add-event-btn">+ Nueva Reserva</button>
+            </div>
+        </div>
+
+        <!-- Monthly Calendar -->
+        <section class="calendar-container">
+            <h3>Calendario Mensual</h3>
+            <div class="calendar monthly-calendar">
+                <div class="calendar-header">
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mié</div>
+                    <div>Jue</div>
+                    <div>Vie</div>
+                    <div>Sáb</div>
+                    <div>Dom</div>
+                </div>
+                <div id="monthly-calendar-grid" class="calendar-grid">
+                    <!-- Calendar will be populated with JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Weekly Calendar -->
+        <section class="calendar-container">
+            <h3>Vista Semanal</h3>
+            <div class="week-selector">
+                <button id="prev-week" class="nav-button">&#10094;</button>
+                <span id="current-week">3 - 9 Marzo, 2025</span>
+                <button id="next-week" class="nav-button">&#10095;</button>
+            </div>
+            <div class="calendar weekly-calendar">
+                <div class="time-column">
+                    <div class="time-header">Hora</div>
+                    <div class="time-slot">8:00</div>
+                    <div class="time-slot">9:00</div>
+                    <div class="time-slot">10:00</div>
+                    <div class="time-slot">11:00</div>
+                    <div class="time-slot">12:00</div>
+                    <div class="time-slot">13:00</div>
+                    <div class="time-slot">14:00</div>
+                    <div class="time-slot">15:00</div>
+                    <div class="time-slot">16:00</div>
+                    <div class="time-slot">17:00</div>
+                    <div class="time-slot">18:00</div>
+                    <div class="time-slot">19:00</div>
+                </div>
+                <div id="weekly-calendar-grid" class="weekly-grid">
+                    <!-- Weekly calendar will be populated with JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Section -->
+        <section class="summary-container">
+            <h3>Resumen de Reservas</h3>
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h4>Salones</h4>
+                    <p class="count">12</p>
+                    <p>Reservas este mes</p>
+                </div>
+                <div class="summary-card">
+                    <h4>Equipos</h4>
+                    <p class="count">8</p>
+                    <p>En préstamo</p>
+                </div>
+                <div class="summary-card">
+                    <h4>Capacitaciones</h4>
+                    <p class="count">5</p>
+                    <p>Programadas</p>
+                </div>
+                <div class="summary-card">
+                    <h4>Disponibilidad</h4>
+                    <p class="count">75%</p>
+                    <p>De recursos</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Bookings -->
+        <section class="recent-bookings">
+            <h3>Reservas Recientes</h3>
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha Inicio</th>
+                        <th>Fecha Fin</th>
+                        <th>Recurso</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="font-medium">1001</td>
+                        <td>05/03/2025 10:00</td>
+                        <td>05/03/2025 12:00</td>
+                        <td>Salón A-101</td>
+                        <td>Capacitación</td>
+                        <td><span class="badge badge-success">Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">1002</td>
+                        <td>06/03/2025 09:00</td>
+                        <td>08/03/2025 18:00</td>
+                        <td>Proyector HD</td>
+                        <td>Equipo</td>
+                        <td><span class="badge badge-info">En uso</span></td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">1003</td>
+                        <td>07/03/2025 14:00</td>
+                        <td>07/03/2025 16:00</td>
+                        <td>Auditorio Principal</td>
+                        <td>Salón</td>
+                        <td><span class="badge badge-warning">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">1004</td>
+                        <td>08/03/2025 09:00</td>
+                        <td>08/03/2025 13:00</td>
+                        <td>Laboratorio C</td>
+                        <td>Capacitación</td>
+                        <td><span class="badge badge-success">Confirmado</span></td>
+                    </tr>
+                    <tr>
+                        <td class="font-medium">1005</td>
+                        <td>10/03/2025 11:00</td>
+                        <td>14/03/2025 17:00</td>
+                        <td>Laptop Dell XPS</td>
+                        <td>Equipo</td>
+                        <td><span class="badge badge-warning">Pendiente</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for new booking -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Nueva Reserva</h2>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="resource-category">Categoría</label>
+                    <select id="resource-category" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="room">Salón</option>
+                        <option value="equipment">Equipo</option>
+                        <option value="training">Capacitación</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resource-name">Recurso</label>
+                    <select id="resource-name" required>
+                        <option value="">Seleccionar...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="start-date">Fecha de inicio</label>
+                    <input type="datetime-local" id="start-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">Fecha de fin</label>
+                    <input type="datetime-local" id="end-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Descripción</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="responsible">Responsable</label>
+                    <input type="text" id="responsible" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancelar</button>
+                    <button type="submit" class="submit-btn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>
