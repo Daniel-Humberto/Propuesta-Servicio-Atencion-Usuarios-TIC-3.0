@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html lang="es">
+
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Formulario User</title>
+            <link rel="stylesheet" href="Style.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css">
+        </head>
+
+
+        <body>
+
+
+        <div class="container">
+
+
+            <header>
+                <div class="header-container">
+                    <div class="logo-title">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg" alt="Logo UASLP" class="logo">
+                        <h1>UASLP > Servicio de atención a usuarios de TIC 3.0</h1>
+                    </div>
+                    <div class="nav-links">
+                        <a href="#">Mis Tickets</a>
+                        <a href="#">Crear ticket</a>
+                        <a href="#">Salir</a>
+                    </div>
+                </div>
+            </header>
+
+
+            <div class="nav-bar">
+                <span>Servicios TI > Crear Ticket</span>
+            </div>
+
+
+            <main class="main">
+
+
+                <div class="page-header">
+                    <h1>Crear Nuevo Ticket</h1>
+                    <div class="date-container">
+                        <p id="current-date" class="text-muted"></p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <form id="ticket-form" action="process.php" method="POST">
+                        <div class="card-header">
+                            <h3>Información del Contacto</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="rpe">RPE</label>
+                                    <input type="text" id="rpe" name="rpe" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="correo">Correo electrónico</label>
+                                    <input type="email" id="correo" name="correo" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="unidad">Unidad</label>
+                                    <select id="unidad" name="unidad" class="form-control">
+                                        <option value="1" selected>COORDINACION DE AGENDA AMBIENTAL DE LA UASLP</option>
+                                        <option value="2">FACULTAD DE INGENIERÍA</option>
+                                        <option value="3">FACULTAD DE MEDICINA</option>
+                                        <option value="4">FACULTAD DE DERECHO</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subunidad">SubUnidad</label>
+                                    <select id="subunidad" name="subunidad" class="form-control">
+                                        <option value="1" selected>AGENDA AMBIENTAL DE LA UASLP</option>
+                                        <option value="2">OTRA SUBUNIDAD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-header">
+                            <h3>Detalle del Servicio Requerido</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="proceso">Proceso</label>
+                                    <select id="proceso" name="proceso" class="form-control">
+                                        <option value="1" selected>Atención y Soporte a Usuarios de Tecnologías</option>
+                                        <option value="2">Otro proceso</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="servicio">Servicio</label>
+                                    <select id="servicio" name="servicio" class="form-control" required>
+                                        <option value="" selected>Seleccione una opción</option>
+                                        <option value="1">Soporte técnico</option>
+                                        <option value="2">Instalación de software</option>
+                                        <option value="3">Problemas de red</option>
+                                    </select>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="asunto">Asunto</label>
+                                    <input type="text" id="asunto" name="asunto" class="form-control" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="detalle">Detalle solicitud</label>
+                                    <textarea id="detalle" name="detalle" rows="5" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Enviar Ticket</button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+
+            </main>
+        </div>
+
+
+        </body>
+
+
+    <script src="Script.js"></script>
+</html>

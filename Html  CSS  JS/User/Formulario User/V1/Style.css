@@ -1,0 +1,219 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 18px;
+    color: #003366;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #003366;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    background-color: #003366;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+/* Contenedor de fecha */
+.date-container {
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+/* Contenedor principal */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+/* Estilos de las secciones del formulario */
+.form-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.section-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.section-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+}
+
+.form-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Filas del formulario */
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.form-row label {
+    width: 150px;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.form-row textarea {
+    resize: vertical;
+}
+
+.submit-row {
+    justify-content: flex-end;
+}
+
+button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #003366;
+    font-size: 12px;
+}
+
+.footer-item img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 5px;
+}
+
+.footer-item:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .form-row label {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+        width: 100%;
+    }
+}

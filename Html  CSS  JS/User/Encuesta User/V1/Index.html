@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg" alt="Logo UASLP" class="logo">
+                <h1>UASLP > Encuesta de Satisfacción del Cliente</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Inicio</a>
+                <a href="#">Mis Encuestas</a>
+                <a href="#">Salir</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-bar">
+        <span>Servicio al Cliente > Encuesta de Satisfacción</span>
+    </div>
+
+    <main class="main">
+        <div class="page-header">
+            <h1>Encuesta de Satisfacción del Cliente</h1>
+            <div class="date-container">
+                <p id="current-date" class="text-muted"></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <form id="satisfaction-form" action="process.php" method="POST">
+                <div class="card-header">
+                    <h3>Información del Cliente</h3>
+                </div>
+                <div class="card-content">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" id="correo" name="correo" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">Servicio Evaluado</label>
+                            <select id="servicio" name="servicio" class="form-control" required>
+                                <option value="" selected>Seleccione un servicio</option>
+                                <option value="1">Soporte Técnico</option>
+                                <option value="2">Atención al Cliente</option>
+                                <option value="3">Ventas</option>
+                                <option value="4">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha-servicio">Fecha del Servicio</label>
+                            <input type="date" id="fecha-servicio" name="fecha-servicio" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-header">
+                    <h3>Calificación de la Experiencia</h3>
+                </div>
+                <div class="card-content">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label>Satisfacción General</label>
+                            <div class="rating-group">
+                                <input type="radio" id="satisfaccion-1" name="satisfaccion" value="1" required>
+                                <label for="satisfaccion-1">1 - Muy Insatisfecho</label>
+                                <input type="radio" id="satisfaccion-2" name="satisfaccion" value="2">
+                                <label for="satisfaccion-2">2 - Insatisfecho</label>
+                                <input type="radio" id="satisfaccion-3" name="satisfaccion" value="3">
+                                <label for="satisfaccion-3">3 - Neutral</label>
+                                <input type="radio" id="satisfaccion-4" name="satisfaccion" value="4">
+                                <label for="satisfaccion-4">4 - Satisfecho</label>
+                                <input type="radio" id="satisfaccion-5" name="satisfaccion" value="5">
+                                <label for="satisfaccion-5">5 - Muy Satisfecho</label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="comentarios">Comentarios Adicionales</label>
+                            <textarea id="comentarios" name="comentarios" rows="5" class="form-control" placeholder="Por favor, comparta sus comentarios detallados..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Enviar Encuesta</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<script src="Script.js"></script>
+</body>
+</html>

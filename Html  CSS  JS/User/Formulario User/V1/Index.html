@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de atención a usuarios de TIC 2.0</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Logo_de_la_UASLP.svg  " alt="Logo UASLP" class="logo">
+                <h1>UASLP > Servicio de atención a usuarios de TIC 2.0</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#">Crear ticket</a>
+                <a href="#">Mis Tickets</a>
+                <a href="#">Salir</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-bar">
+        <span>Servicios TI > Crear Ticket</span>
+    </div>
+
+    <div class="date-container">
+        <h2>Fecha y hora de creación del ticket:</h2>
+        <p id="current-date"></p>
+    </div>
+
+    <div class="main-container">
+        <form id="ticket-form" action="process.php" method="POST">
+            <!-- Sección de información del contacto -->
+            <div class="form-section">
+                <div class="section-header">
+                    
+                    <h2>Información del contacto</h2>
+                </div>
+                <div class="form-content">
+                    <div class="form-row">
+                        <label for="rpe">RPE</label>
+                        <input type="text" id="rpe" name="rpe">
+                    </div>
+                    <div class="form-row">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="form-row">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo">
+                    </div>
+                    <div class="form-row">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-row">
+                        <label for="unidad">Unidad</label>
+                        <select id="unidad" name="unidad">
+                            <option value="1" selected>COORDINACION DE AGENDA AMBIENTAL DE LA UASLP</option>
+                            <option value="2">FACULTAD DE INGENIERÍA</option>
+                            <option value="3">FACULTAD DE MEDICINA</option>
+                            <option value="4">FACULTAD DE DERECHO</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="subunidad">SubUnidad</label>
+                        <select id="subunidad" name="subunidad">
+                            <option value="1" selected>AGENDA AMBIENTAL DE LA UASLP</option>
+                            <option value="2">OTRA SUBUNIDAD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de detalle del servicio -->
+            <div class="form-section">
+                <div class="section-header">
+                    
+                    <h2>Detalle del servicio requerido</h2>
+                </div>
+                <div class="form-content">
+                    <div class="form-row">
+                        <label for="proceso">Proceso</label>
+                        <select id="proceso" name="proceso">
+                            <option value="1" selected>Atención y Soporte a Usuarios de Tecnologías</option>
+                            <option value="2">Otro proceso</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="servicio">Servicio</label>
+                        <select id="servicio" name="servicio">
+                            <option value="" selected>Seleccione una opción</option>
+                            <option value="1">Soporte técnico</option>
+                            <option value="2">Instalación de software</option>
+                            <option value="3">Problemas de red</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="detalle">Detalle solicitud</label>
+                        <textarea id="detalle" name="detalle" rows="5" required></textarea>
+                    </div>
+                    <div class="form-row submit-row">
+                        <button type="submit" id="enviar">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
