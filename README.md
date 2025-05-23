@@ -152,13 +152,13 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 <div align="center">
   <h4>Formulario de Solicitudes</h4>
   <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png" alt="Formulario Solicitudes" width="70%">
-  <p><em>Interfaz intuitiva para la creación de nuevas solicitudes de servicio técnico</em></p>
+  <p><em>Interfaz intuitiva para la creación de nuevas solicitudes</em></p>
 </div>
 
 <div align="center">
   <h4>Solicitud de Instalaciones</h4>
   <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png" alt="Solicitud Instalaciones" width="70%">
-  <p><em>Formulario especializado para solicitudes de instalación de equipos e infraestructura</em></p>
+  <p><em>Formulario especializado para solicitudes de instalaciónes, donde se contempla el caso de ser necesario equipo o infraestructura extra</em></p>
 </div>
 
 <div align="center">
@@ -186,7 +186,7 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 <div align="center">
   <h4>Dashboard Moderno</h4>
   <img src="Imagenes/React/1.png" alt="Dashboard React" width="70%">
-  <p><em>Interfaz moderna desarrollada en React con componentes interactivos y responsivos</em></p>
+  <p><em>Interfaz moderna con componentes interactivos y responsivos</em></p>
 </div>
 
 <div align="center">
