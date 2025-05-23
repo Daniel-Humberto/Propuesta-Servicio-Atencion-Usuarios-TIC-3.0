@@ -58,7 +58,7 @@ Diseñada en MySQL con relaciones normalizadas para:
 
 ## 💻 FrontEnd
 
-Se contemplan tres enfoques de desarrollo:
+Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 
 1. **Laravel + HTML/CSS/JS** (Enfoque clásico)
    Simple, rápido y con buen rendimiento.
