@@ -13,7 +13,6 @@ La aplicación permite a usuarios registrar solicitudes (tickets) según su perf
 ## 🛠️ Estructura del Sistema
 
 * **Jerarquía funcional:**
-
   * **Procesos** → agrupan uno o más **Servicios**
   * **Servicios** → pueden requerir **Infraestructura**
 * **Gestión por perfiles de usuario:**
@@ -43,6 +42,18 @@ Diseñada en MySQL con relaciones normalizadas para:
 * Evaluación del servicio (`EncuestaSatisfaccion`)
 * Canal abierto de retroalimentación (`BuzonSugerencias`)
 
+<div align="center">
+  <h3>📊 Modelo de Base de Datos</h3>
+  <img src="Imagenes/Diagramas/DataBase.png" alt="Diagrama de Base de Datos" width="80%">
+  <p><em>Estructura completa de la base de datos con todas las relaciones y entidades del sistema</em></p>
+</div>
+
+<div align="center">
+  <h3>🔄 Diagrama de Flujo del Sistema</h3>
+  <img src="Imagenes/Diagramas/Diagrama.png" alt="Diagrama de Flujo General" width="80%">
+  <p><em>Flujo de procesos y arquitectura general del sistema de atención a usuarios</em></p>
+</div>
+
 ---
 
 ## 💻 FrontEnd
@@ -58,101 +69,154 @@ Se contemplan tres enfoques de desarrollo:
 3. **Laravel + Next.js + React + ShadCN UI + Tailwind CSS** (SPA desacoplada)
    Arquitectura escalable y modular con experiencia fluida.
 
+---
 
+## 🖼️ Interfaces del Sistema
 
+### 🔐 Pantalla de Acceso
+
+<div align="center">
+  <h4>Inicio de Sesión</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Login.png" alt="Pantalla de Login" width="70%">
+  <p><em>Interfaz principal para el acceso al sistema con autenticación segura</em></p>
+</div>
 
 ---
 
+### 👨‍💼 Panel de Administrador - Versión HTML/CSS/JS
 
+<div align="center">
+  <h4>Dashboard Principal</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/1.png" alt="Dashboard Admin 1" width="70%">
+  <p><em>Vista general del panel administrativo con métricas y estadísticas</em></p>
+</div>
 
+<div align="center">
+  <h4>Dashboard - Análisis de Rendimiento</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/2.png" alt="Dashboard Admin 2" width="70%">
+  <p><em>Análisis detallado de rendimiento y KPIs del sistema</em></p>
+</div>
 
-## 🖼️ Imágenes del Proyecto
+<div align="center">
+  <h4>Dashboard - Resumen Ejecutivo</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/3.png" alt="Dashboard Admin 3" width="70%">
+  <p><em>Resumen ejecutivo con indicadores clave y tendencias</em></p>
+</div>
 
-A continuación se listan y describen las imágenes contenidas en las distintas carpetas del proyecto.
+<div align="center">
+  <h4>Gestión de Tickets</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/4.png" alt="Tickets Admin" width="70%">
+  <p><em>Panel de administración de tickets con filtros y estados en tiempo real</em></p>
+</div>
 
+<div align="center">
+  <h4>Sistema de Chat por Ticket</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/5.png" alt="Chat Ticket Admin" width="70%">
+  <p><em>Interfaz de comunicación directa con usuarios para resolución de incidencias</em></p>
+</div>
 
----
+<div align="center">
+  <h4>Gestión de Operadores</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/6.png" alt="Operadores Admin" width="70%">
+  <p><em>Panel de administración de personal técnico y asignación de roles</em></p>
+</div>
 
+<div align="center">
+  <h4>Detalles de Operador</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/7.png" alt="Detalles Operador Admin" width="70%">
+  <p><em>Vista detallada del perfil y rendimiento individual de cada operador</em></p>
+</div>
 
-### 📌 1. Diagramas
+<div align="center">
+  <h4>Control de Inventario</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/8.png" alt="Inventario Admin" width="70%">
+  <p><em>Sistema de gestión de recursos e infraestructura tecnológica</em></p>
+</div>
 
-Estas imágenes representan el modelo de datos y la arquitectura general del sistema.
-
-- **`DataBase`**  
-  ![DataBase](Imagenes/Diagramas/DataBase.png)  
-  Diagrama de la base de datos utilizada en el sistema.
-
-- **`Diagrama`**  
-  ![Diagrama](Imagenes/Diagramas/Diagrama.png)  
-  Vista del flujo general del sistema.
-
-
----
-
-
-### 📌 2. Interfaz HTML - CSS - JS
-
-#### 🔐 Login
-
-- **`Login`**  
-  ![Login](Imagenes/HTML%20-%20CSS%20-%20JS/Login.png)  
-  Pantalla principal de inicio de sesión del sistema.
-
-
----
-
-
-#### 👨‍💼 Módulo Administrador
-
-Capturas de las diferentes vistas disponibles para el administrador del sistema.
-
-| Vista | Imagen |
-|-------|--------|
-| DashBoard 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/1.png) |
-| DashBoard 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/2.png) |
-| DashBoard 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/3.png) |
-| Tickets | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/4.png) |
-| Chat Ticket | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/5.png) |
-| Operadores | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/6.png) |
-| Detalless Operadore | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/7.png) |
-| Inventario | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/8.png) |
-| Calendario | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/9.png) |
-
-
----
-
-
-#### 👤 Módulo Usuario
-
-Capturas del panel del usuario final que reporta incidencias.
-
-| Vista | Imagen |
-|-------|--------|
-| DashBoard | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/1.png) |
-| Formulario Solicitudes | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png) |
-| Solicitud  Instalaciones | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png) |
-| Tickets | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/4.png) |
-| Chat Ticket | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/5.png) |
-| Encuesta Satisfaccion | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/6.png) |
-
+<div align="center">
+  <h4>Calendario de Actividades</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/Admin/9.png" alt="Calendario Admin" width="70%">
+  <p><em>Planificación y seguimiento de mantenimientos y servicios programados</em></p>
+</div>
 
 ---
 
+### 👤 Panel de Usuario - Versión HTML/CSS/JS
 
-### ⚛️ 3. Interfaz en React
+<div align="center">
+  <h4>Dashboard del Usuario</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/1.png" alt="Dashboard Usuario" width="70%">
+  <p><em>Panel principal del usuario con acceso rápido a servicios y estado de solicitudes</em></p>
+</div>
 
-#### 👨‍💼 Módulo Administrador
+<div align="center">
+  <h4>Formulario de Solicitudes</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png" alt="Formulario Solicitudes" width="70%">
+  <p><em>Interfaz intuitiva para la creación de nuevas solicitudes de servicio técnico</em></p>
+</div>
 
-Capturas de una versión alternativa del sistema desarrollada con React.
+<div align="center">
+  <h4>Solicitud de Instalaciones</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png" alt="Solicitud Instalaciones" width="70%">
+  <p><em>Formulario especializado para solicitudes de instalación de equipos e infraestructura</em></p>
+</div>
 
-| Vista | Imagen |
-|-------|--------|
-| DashBoard | ![](Imagenes/React/1.png) |
-| Tickets | ![](Imagenes/React/2.png) |
-| Chats Ticket | ![](Imagenes/React/3.png) |
-| Chat Ticket | ![](Imagenes/React/4.png) |
-| Inventario | ![](Imagenes/React/5.png) |
-| Calendario | ![](Imagenes/React/6.png) |
+<div align="center">
+  <h4>Mis Tickets</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/4.png" alt="Tickets Usuario" width="70%">
+  <p><em>Vista de todas las solicitudes del usuario con seguimiento de estado en tiempo real</em></p>
+</div>
 
+<div align="center">
+  <h4>Chat de Soporte</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/5.png" alt="Chat Ticket Usuario" width="70%">
+  <p><em>Sistema de mensajería directa con el personal técnico asignado</em></p>
+</div>
+
+<div align="center">
+  <h4>Encuesta de Satisfacción</h4>
+  <img src="Imagenes/HTML%20-%20CSS%20-%20JS/User/6.png" alt="Encuesta Satisfacción" width="70%">
+  <p><em>Evaluación del servicio recibido para mejora continua del sistema</em></p>
+</div>
+
+---
+
+### ⚛️ Panel de Administrador - Versión React
+
+<div align="center">
+  <h4>Dashboard Moderno</h4>
+  <img src="Imagenes/React/1.png" alt="Dashboard React" width="70%">
+  <p><em>Interfaz moderna desarrollada en React con componentes interactivos y responsivos</em></p>
+</div>
+
+<div align="center">
+  <h4>Gestión de Tickets Avanzada</h4>
+  <img src="Imagenes/React/2.png" alt="Tickets React" width="70%">
+  <p><em>Panel avanzado de tickets con filtros dinámicos y actualizaciones en tiempo real</em></p>
+</div>
+
+<div align="center">
+  <h4>Lista de Conversaciones</h4>
+  <img src="Imagenes/React/3.png" alt="Chats Ticket React" width="70%">
+  <p><em>Vista organizada de todas las conversaciones activas con usuarios</em></p>
+</div>
+
+<div align="center">
+  <h4>Chat Individual</h4>
+  <img src="Imagenes/React/4.png" alt="Chat Ticket React" width="70%">
+  <p><em>Interfaz de chat moderna con historial completo y funciones avanzadas</em></p>
+</div>
+
+<div align="center">
+  <h4>Inventario Digital</h4>
+  <img src="Imagenes/React/5.png" alt="Inventario React" width="70%">
+  <p><em>Sistema digital de inventario con búsqueda avanzada y categorización automática</em></p>
+</div>
+
+<div align="center">
+  <h4>Calendario Interactivo</h4>
+  <img src="Imagenes/React/6.png" alt="Calendario React" width="70%">
+  <p><em>Calendario interactivo con gestión de eventos y recordatorios automáticos</em></p>
+</div>
 
 ---
