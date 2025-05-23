@@ -71,9 +71,13 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 
 ---
 
-## 🖼️ Interfaces del Sistema
+## 🖼️ Prototipos de Diseños de Interfaces del Sistema
 
-### 🔐 Pantalla de Acceso
+---
+
+## 🖼️ Prototipo 1
+
+### 🔐 Login
 
 <div align="center">
   <h4>Inicio de Sesión</h4>
@@ -83,7 +87,7 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 
 ---
 
-### 👨‍💼 Panel de Administrador - Versión HTML/CSS/JS
+### 👨‍💼 Panel de Administrador 
 
 <div align="center">
   <h4>Dashboard Principal</h4>
@@ -141,7 +145,7 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 
 ---
 
-### 👤 Panel de Usuario - Versión HTML/CSS/JS
+### 👤 Panel de Usuario
 
 <div align="center">
   <h4>Dashboard del Usuario</h4>
@@ -181,7 +185,10 @@ Se contemplan tres posibles enfoques de desarrollo FrontEnd:
 
 ---
 
-### ⚛️ Panel de Administrador - Versión React
+
+## 🖼️ Prototipo 2
+
+### ⚛️ Panel de Administrador 
 
 <div align="center">
   <h4>Dashboard Moderno</h4>
