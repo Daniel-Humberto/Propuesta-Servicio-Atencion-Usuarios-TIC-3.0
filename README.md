@@ -108,15 +108,15 @@ Capturas de las diferentes vistas disponibles para el administrador del sistema.
 
 | Vista | Imagen |
 |-------|--------|
-| Vista 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/1.png) |
-| Vista 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/2.png) |
-| Vista 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/3.png) |
-| Vista 4 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/4.png) |
-| Vista 5 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/5.png) |
-| Vista 6 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/6.png) |
-| Vista 7 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/7.png) |
-| Vista 8 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/8.png) |
-| Vista 9 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/9.png) |
+| DashBoard 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/1.png) |
+| DashBoard 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/2.png) |
+| DashBoard 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/3.png) |
+| Tickets | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/4.png) |
+| Chat Ticket | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/5.png) |
+| Operadores | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/6.png) |
+| Detalless Operadore | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/7.png) |
+| Inventario | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/8.png) |
+| Calendario | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/9.png) |
 
 
 ---
@@ -128,12 +128,12 @@ Capturas del panel del usuario final que reporta incidencias.
 
 | Vista | Imagen |
 |-------|--------|
-| Vista 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/1.png) |
-| Vista 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png) |
-| Vista 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png) |
-| Vista 4 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/4.png) |
-| Vista 5 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/5.png) |
-| Vista 6 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/6.png) |
+| DashBoard | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/1.png) |
+| Formulario Solicitudes | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png) |
+| Solicitud  Instalaciones | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png) |
+| Tickets | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/4.png) |
+| Chat Ticket | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/5.png) |
+| Encuesta Satisfaccion | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/6.png) |
 
 
 ---
@@ -141,16 +141,18 @@ Capturas del panel del usuario final que reporta incidencias.
 
 ### ⚛️ 3. Interfaz en React
 
+#### 👨‍💼 Módulo Administrador
+
 Capturas de una versión alternativa del sistema desarrollada con React.
 
 | Vista | Imagen |
 |-------|--------|
-| Vista 1 | ![](Imagenes/React/1.png) |
-| Vista 2 | ![](Imagenes/React/2.png) |
-| Vista 3 | ![](Imagenes/React/3.png) |
-| Vista 4 | ![](Imagenes/React/4.png) |
-| Vista 5 | ![](Imagenes/React/5.png) |
-| Vista 6 | ![](Imagenes/React/6.png) |
+| DashBoard | ![](Imagenes/React/1.png) |
+| Tickets | ![](Imagenes/React/2.png) |
+| Chats Ticket | ![](Imagenes/React/3.png) |
+| Chat Ticket | ![](Imagenes/React/4.png) |
+| Inventario | ![](Imagenes/React/5.png) |
+| Calendario | ![](Imagenes/React/6.png) |
 
 
 ---
