@@ -58,4 +58,99 @@ Se contemplan tres enfoques de desarrollo:
 3. **Laravel + Next.js + React + ShadCN UI + Tailwind CSS** (SPA desacoplada)
    Arquitectura escalable y modular con experiencia fluida.
 
+
+
+
+---
+
+
+
+
+## 🖼️ Imágenes del Proyecto
+
+A continuación se listan y describen las imágenes contenidas en las distintas carpetas del proyecto.
+
+
+---
+
+
+### 📌 1. Diagramas
+
+Estas imágenes representan el modelo de datos y la arquitectura general del sistema.
+
+- **`DataBase`**  
+  ![DataBase](Imagenes/Diagramas/DataBase.png)  
+  Diagrama de la base de datos utilizada en el sistema.
+
+- **`Diagrama`**  
+  ![Diagrama](Imagenes/Diagramas/Diagrama.png)  
+  Vista del flujo general del sistema.
+
+
+---
+
+
+### 📌 2. Interfaz HTML - CSS - JS
+
+#### 🔐 Login
+
+- **`Login`**  
+  ![Login](Imagenes/HTML%20-%20CSS%20-%20JS/Login.png)  
+  Pantalla principal de inicio de sesión del sistema.
+
+
+---
+
+
+#### 👨‍💼 Módulo Administrador
+
+Capturas de las diferentes vistas disponibles para el administrador del sistema.
+
+| Vista | Imagen |
+|-------|--------|
+| Vista 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/1.png) |
+| Vista 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/2.png) |
+| Vista 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/3.png) |
+| Vista 4 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/4.png) |
+| Vista 5 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/5.png) |
+| Vista 6 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/6.png) |
+| Vista 7 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/7.png) |
+| Vista 8 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/8.png) |
+| Vista 9 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/Admin/9.png) |
+
+
+---
+
+
+#### 👤 Módulo Usuario
+
+Capturas del panel del usuario final que reporta incidencias.
+
+| Vista | Imagen |
+|-------|--------|
+| Vista 1 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/1.png) |
+| Vista 2 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/2.png) |
+| Vista 3 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/3.png) |
+| Vista 4 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/4.png) |
+| Vista 5 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/5.png) |
+| Vista 6 | ![](Imagenes/HTML%20-%20CSS%20-%20JS/User/6.png) |
+
+
+---
+
+
+### ⚛️ 3. Interfaz en React
+
+Capturas de una versión alternativa del sistema desarrollada con React.
+
+| Vista | Imagen |
+|-------|--------|
+| Vista 1 | ![](Imagenes/React/1.png) |
+| Vista 2 | ![](Imagenes/React/2.png) |
+| Vista 3 | ![](Imagenes/React/3.png) |
+| Vista 4 | ![](Imagenes/React/4.png) |
+| Vista 5 | ![](Imagenes/React/5.png) |
+| Vista 6 | ![](Imagenes/React/6.png) |
+
+
 ---
