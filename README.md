@@ -1,4 +1,4 @@
-# Servicio-Atencion-Usuarios-TIC-3.0
+# Propuesta Servicio Atencion Usuarios TIC-3.0
 
 Este proyecto es una aplicación web desarrollada como parte de mi servicio social en la Agenda Ambiental. Su objetivo es mejorar la gestión de recursos, servicios técnicos y solicitudes de usuarios mediante un sistema integral y automatizado.
 
